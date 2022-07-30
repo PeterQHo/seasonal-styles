@@ -100,13 +100,45 @@
 			var datetext = $('input[name=dateField]').val();//grab data from textbox
 			var formDate = new Date(datetext);//create a date from form input
 			var today = new Date();
+            var month = formDate.getMonth();
+
+
+switch(month){
+    case 0-1:
+            $("html").css("background-color", "#005393");
+            $("#wear").attr("src","images/winter-wear.jpg");
+            $("#logo").attr("src","images/winter.gif");
+            $("header h3").text("Jump into Winter Wear!");
+    break;
+
+    case 3-5:
+            $("html").css("background-color", "#2B7129");
+            $("#wear").attr("src","images/spring-wear.jpg");
+            $("#logo").attr("src","images/spring.gif");
+            $("header h3").text("Jump into Spring Wear!");
+
+    case 6-8:
+            $("html").css("background-color", "#EBA52B");
+            $("#wear").attr("src","images/summer-wear.jpg");
+            $("#logo").attr("src","images/summer.gif");
+            $("header h3").text("Jump into Summer Wear!");
+    break;
+
+    case 9-11:
+            $("html").css("background-color", "#A81124");
+            $("#wear").attr("src","images/fall-wear.jpg");
+            $("#logo").attr("src","images/fall.gif");
+            $("header h3").text("Jump into Fall Wear!");
+    break;
+
+}
 			
-			if(formDate > today)
-			{
-				alert(datetext + " is in the future!");
-			}else{
-				alert(datetext + " is in the past!");
-			}
+			// if(formDate > today)
+			// {
+			// 	alert(datetext + " is in the future!");
+			// }else{
+			// 	alert(datetext + " is in the past!");
+			// }
 		});
 	});
     </script>
